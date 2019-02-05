@@ -1,0 +1,7 @@
+{
+  "extends": ["config:base"],
+  "maven": {
+    "enabled": true
+  },
+  "rangeStrategy": "replace"
+}

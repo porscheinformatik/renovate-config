@@ -1,0 +1,13 @@
+{
+  "name": "renovate-config",
+  "version": "0.0.0",
+  "description": "Shared Renovate configuration for Porsche Informatik.",
+  "private": true,
+  "scripts": {
+    "test": "renovate-config-validator"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "renovate": "^14.10.3"
+  }
+}
