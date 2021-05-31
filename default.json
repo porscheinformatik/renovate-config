@@ -1,0 +1,52 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":maintainLockFilesWeekly"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "terraform": {
+    "packageRules": [
+      {
+        "groupName": "AzureRM dependencies",
+        "groupSlug": "azurerm",
+        "matchPackagePatterns": [
+          "azurerm"
+        ]
+      }
+    ]
+  },
+  "java": {
+    "packageRules": [
+      {
+        "allowedVersions": "!/jenkins/",
+        "matchPackagePatterns": [
+          "org.apache.maven.plugins:maven-enforcer-plugin"
+        ]
+      }
+    ]
+  },
+  "js": {
+    "packageRules": [
+      {
+        "matchPackagePatterns": [
+          "^typescript$"
+        ],
+        "matchUpdateTypes": [
+          "major",
+          "minor"
+        ],
+        "enabled": false
+      },
+      {
+        "matchPackagePatterns": [
+          "^@angular-eslint/"
+        ],
+        "groupName": "Angular ESLint",
+        "groupSlug": "angular-eslint"
+      }
+    ]
+  }
+}
